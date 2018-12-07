@@ -231,6 +231,17 @@
       </vdialog>
       <div class="tab-data" style="min-height: 512px;">
         <div style="width: 100%;text-align: left;padding: 0 5px 10px;">
+          <label class="" style="margin-right: 10px;">
+            查看
+            <select v-model="groupType" @change="getInitData(type)">
+              <option value="0">全部</option>
+              <option value="a">A组</option>
+              <option value="b">B组</option>
+              <option value="c">C组</option>
+              <option value="d">D组</option>
+              <option value="e">E组</option>
+            </select>
+          </label>
           <button class="btn btn-info btn-xs" :class="type == 'have' ? 'curr' : ''" @click="switchFn('have')">持仓账户
           </button>
           <button class="btn btn-info btn-xs" :class="type == 'empty' ? 'curr' : ''" @click="switchFn('empty')">
@@ -264,7 +275,7 @@
               </tr>
               </thead>
               <tbody>
-              <tr v-for="item in dataList" :key='item.id' style="text-indent: 1%;">
+              <tr v-for="item in dataList" :key='item.id' style="text-indent: 1%;" v-if="item.group == groupType || groupType == 0">
                 <td>
                   <div class="callBox" :style="'background:'+item.nanpin_color"></div>
                   {{item.user_account}}
@@ -342,7 +353,7 @@
               </tr>
               </thead>
               <tbody>
-              <tr v-for="item in dataList2" :key='item.id' style="text-indent: 1%;">
+              <tr v-for="item in dataList2" :key='item.id' style="text-indent: 1%;" v-if="item.group == groupType">
                 <td>
                   <div class="callBox" :style="'background:'+item.nanpin_color"></div>
                   {{item.user_account}}
@@ -419,7 +430,7 @@
           </tr>
           </thead>
           <tbody>
-          <tr v-for="item in botLogs" :key='item.id' style="text-indent: 1%;">
+          <tr v-for="item in botLogs" :key='item.id' style="text-indent: 1%;" v-if="item.group == groupType">
             <td>
               {{item.operator}}
             </td>
@@ -465,6 +476,7 @@
     data: function () {
       return {
         editData: true,
+        groupType: 0,
         user: {},
         dataList: [],
         dataList2: [],
@@ -624,12 +636,13 @@
       },
       datatables: function () {
         let _this = this;
+        $(".datatable-basicMo").DataTable().destroy();
         if ($(".datatable-basicMo").length > 0) {
           $(".datatable-basicMo").DataTable({
             aaSorting: [[13, "desc"]],
             "scrollY": 500,
             retrieve:true,
-            destroy: true,
+            ordering : false,
             searching: false,
             paging: false,
             info: false
