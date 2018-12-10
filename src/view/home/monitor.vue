@@ -353,7 +353,7 @@
               </tr>
               </thead>
               <tbody>
-              <tr v-for="item in dataList2" :key='item.id' style="text-indent: 1%;" v-if="item.group == groupType">
+              <tr v-for="item in dataList2" :key='item.id' style="text-indent: 1%;" v-if="item.group == groupType || groupType == 0">
                 <td>
                   <div class="callBox" :style="'background:'+item.nanpin_color"></div>
                   {{item.user_account}}
@@ -430,7 +430,7 @@
           </tr>
           </thead>
           <tbody>
-          <tr v-for="item in botLogs" :key='item.id' style="text-indent: 1%;" v-if="item.group == groupType">
+          <tr v-for="item in botLogs" :key='item.id' style="text-indent: 1%;">
             <td>
               {{item.operator}}
             </td>

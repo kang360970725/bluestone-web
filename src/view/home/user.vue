@@ -148,14 +148,26 @@
               </label>
 
               <button class="btn btn-info btn-xs" style="margin-bottom: 5px" @click="searchFn">查询</button>
-              <button class="btn btn-info btn-xs pull-right" style="margin-bottom: 5px" @click="exportCardFn">导出选中会员
-              </button>
+              <button class="btn btn-info btn-xs pull-right" style="margin-bottom: 5px" @click="exportCardFn">导出选中会员</button>
+              <button class="btn btn-info btn-xs pull-right" style="margin-bottom: 5px;margin-right: 10px;" @click="setUserGroupFn">确认分组</button>
+              <label class="pull-right" style="margin-right: 10px;">
+                将选中用户设置到
+                <select v-model="groupType">
+                  <option value="a">A组</option>
+                  <option value="b">B组</option>
+                  <option value="c">C组</option>
+                  <option value="d">D组</option>
+                  <option value="e">E组</option>
+                </select>
+              </label>
+
             </div>
             <table class="table table-striped table-bordered">
               <thead>
               <tr>
                 <th><label><input v-model="checkAll" type="checkbox" @click="checkAllFn"/>全选</label></th>
                 <th>账号</th>
+                <th>当前组</th>
                 <th>bot ID</th>
                 <th>状态</th>
                 <th>bot状态</th>
@@ -169,6 +181,7 @@
               <tr v-for="item in dataList" :key='item.id' v-if="item.level != 5">
                 <td><input v-model="item.check" type="checkbox"/></td>
                 <td>{{item.account}}</td>
+                <td style="text-transform: uppercase;">{{!!item.group ? item.group + '组' : '暂未分组'}}</td>
                 <td>bs{{item.uuid}}</td>
                 <td><span :style="'color:' + item.color">{{item.typeName}}</span></td>
                 <td><span :style="item.activation_state == 0 ? 'color:orange' : 'color:green'">{{item.activation_state == 0 ? '未激活' : '已激活'}}</span>
@@ -592,6 +605,7 @@
     data: function () {
       return {
         tabType: 1,
+        groupType: 'a',
         user: {},
         editUser: {},
         dataList: [],
@@ -808,7 +822,7 @@
             id: _this.editUser.id,
             account: _this.editUser.account,
             user_principal: _this.editUser.user_principal
-          }
+          };
           _this.$axios.put('useredit/principal', obj).then(function (result) {
             if (result.status == 0) {
               _this.myMessage.success('修改成功!');
@@ -1049,6 +1063,33 @@
         }
         var blob = new Blob([cardTxt], {type: "text/plain;charset=utf-8"});
         File.saveAs(blob, "导出会员.txt");
+      },
+      setUserGroupFn() {//用户分组
+        let _this = this,
+          userList = [];
+        _this.dataList.forEach(function (item) {
+          if (item.check) {
+            userList.push(item.account)
+          }
+        });
+        if (userList.length <= 0) {
+          _this.myMessage.info('请先选中要分组的用户');
+          return;
+        }
+        let obj = {
+          account: userList,
+          group: _this.groupType,
+        };
+        _this.$axios.put('putUserByGroup', obj).then(function (result) {
+          if (result.status == 0) {
+            _this.myMessage.success('修改成功!');
+            _this.getInitData();
+          } else {
+            _this.myMessage.error(result.msg);
+          }
+        }).catch(function (err) {
+          _this.myMessage.error('网络请求发生异常,请稍后再试...');
+        })
       },
       checkAllFn(){//全选反选
         let _this = this;
