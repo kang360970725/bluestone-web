@@ -247,9 +247,8 @@
           <button class="btn btn-info btn-xs" :class="type == 'empty' ? 'curr' : ''" @click="switchFn('empty')">
             空仓账户
           </button>
-          <button style="float: right;" class="btn btn-info btn-xs" @click="getInitData(type)">手动刷新({{time > 0 ? time :
-            0}})
-          </button>
+          <button style="float: right;margin-right: 20px;" class="btn btn-info btn-xs" @click="getInitData(type)">手动刷新({{time > 0 ? time : 0}})</button>
+          <button style="float: right;" class="btn btn-info btn-xs" @click="setBotListFn()">批量修改参数</button>
         </div>
         <div class="present-history">
           <div class="block-content" style="min-height: 512px;" v-show="type == 'have'">
@@ -751,6 +750,14 @@
             }
           })
         }
+      },
+      setBotListFn: function (json) {
+        let _this = this;
+        _this.showDialog = true;
+        _this.editBotUser = item;
+        _this.bot = {
+          open: true
+        };
       },
       // initParmFn(parm, val, newVal) {
       //   let key = '';
