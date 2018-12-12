@@ -31,11 +31,11 @@
               <div class="w-col-10">
                 <div class="app-radio round">
                   <label style="margin-right: 10px;"><input type="radio" name="bottype" v-model="editUser.bot_type"
-                                                            value="1"> 高级版<span></span></label>
+                                                            value="1"> 标准版<span></span></label>
                   <label style="margin-right: 10px;"><input type="radio" name="bottype" v-model="editUser.bot_type"
-                                                            value="2"> 综合版<span></span></label>
+                                                            value="2"> 专业版<span></span></label>
                   <label style="margin-right: 10px;"><input type="radio" name="bottype" v-model="editUser.bot_type"
-                                                            value="3"> 综合版<span></span></label>
+                                                            value="3"> 精英版<span></span></label>
                 </div>
                 <!--<input type="text" v-model="editUser.email" id="email" class="form-control">-->
                 <span class="error"></span>
@@ -168,6 +168,7 @@
                 <th><label><input v-model="checkAll" type="checkbox" @click="checkAllFn"/>全选</label></th>
                 <th>账号</th>
                 <th>当前组</th>
+                <th>余额</th>
                 <th>bot ID</th>
                 <th>状态</th>
                 <th>bot状态</th>
@@ -182,6 +183,7 @@
                 <td><input v-model="item.check" type="checkbox"/></td>
                 <td>{{item.account}}</td>
                 <td style="text-transform: uppercase;">{{!!item.group ? item.group + '组' : '暂未分组'}}</td>
+                <td>{{item.principal}}</td>
                 <td>bs{{item.uuid}}</td>
                 <td><span :style="'color:' + item.color">{{item.typeName}}</span></td>
                 <td><span :style="item.activation_state == 0 ? 'color:orange' : 'color:green'">{{item.activation_state == 0 ? '未激活' : '已激活'}}</span>
@@ -701,6 +703,7 @@
               if (item.endtime > 0) {
                 item['timeTxt'] = _this.common.initTimeFn(date);
               }
+              item.principal = _this.common.initNumFn(item.principal,6);
               switch (item.type) {
                 case 0:
                   item.typeName = '注册用户';

@@ -26,7 +26,7 @@
               </tr>
               </thead>
               <tbody>
-              <tr v-for="item in dataList" :key='item.id'>
+              <tr v-for="item in dataList" :key='item.id' v-if="item.proportionAll > -5">
                 <td>{{item.user_account}}</td>
                 <td>{{item.principal}}</td>
                 <td>{{item.bot_amount}}</td>
@@ -93,14 +93,15 @@
               item.bot_lirun = parseFloat(item.bot_lirun);
               item.bot_lirun = !item.bot_lirun ? 0 : _this.common.initNumFn(item.bot_lirun,6);
               item.bonus_base = !item.bonus_base ? 0 : _this.common.initNumFn(item.bonus_base,6);
+              // item.principal = parseFloat(item.bot_prevDeposited) - parseFloat(item.bot_prevWithdrawn) + parseFloat(item.bot_lirun);
               item.principal = parseFloat(item.bot_prevDeposited) - parseFloat(item.bot_prevWithdrawn);
               item.principal = _this.common.initNumFn(item.principal,6);
               // item.user_principal = parseFloat(item.bot_prevDeposited) - parseFloat(item.bot_prevWithdrawn) + parseFloat(item.bot_lirun);
               // item.user_principal = _this.common.initNumFn(item.user_principal,6);
               let profit = (parseFloat(item.bot_lirun) - parseFloat(item.bonus_base)).toFixed(6);
               item['profit'] = _this.common.initNumFn(profit,6);
-              item['proportionAll'] = !isFinite(item.bot_lirun / item.principal * 100) ? 0 : (item.bot_lirun / item.principal * 100).toFixed(2);//盈亏比例
-              item['proportion'] = !isFinite(item.profit / item.principal * 100) ? 0 : (item.profit / item.principal * 100).toFixed(2);//盈亏比例
+              item['proportionAll'] = !isFinite(item.bot_lirun / Math.abs(item.principal) * 100) ? 0 : (item.bot_lirun / Math.abs(item.principal) * 100).toFixed(2);//盈亏比例
+              item['proportion'] = !isFinite(item.profit / Math.abs(item.principal) * 100) ? 0 : (item.profit / Math.abs(item.principal) * 100).toFixed(2);//盈亏比例
               _this.profitCount = _this.profitCount + parseFloat(item.profit);
               _this.btcCount = _this.btcCount + parseFloat(item.user_principal);
               item.bot_amount = parseFloat(item.bot_amount);

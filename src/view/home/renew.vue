@@ -44,7 +44,7 @@
               <label class="w-col w-col-2 control-label">支付价格:</label>
               <div class="w-col w-col-10">
                 <label class="control-label">
-                  <span>{{editRenew.data_time == 30 ? 150 : 1000}} usd 或 {{editRenew.price}} btc</span>
+                  <span>{{editRenew.data_time == 1 ? 1000 : (editRenew.data_time == 2 ? 2000 : 3000)}} usd 或 {{editRenew.price}} btc</span>
                 </label>
               </div>
             </div>

@@ -15,7 +15,7 @@
       <!--</div>-->
     <!--</div>-->
     <!-- END SUB BANNER -->
-    <section class="w-section section" style="padding: 20px 10px;">
+    <section class="w-section section" style="padding: 5px 10px;">
       <div class="container">
         <div class="w-col w-col-12 border1" style="margin: 0 auto;float: none;">
           <div class="w-clearfix">
