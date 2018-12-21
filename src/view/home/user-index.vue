@@ -1257,8 +1257,13 @@
           let obj = {
             uuid: _this.user.uuid,
             account: _this.user.account,
+            address: _this.user.walletaddress,
             num: _this.putNum,
           };
+          if (!_this.user.walletaddress) {
+            _this.myMessage.info('请先添加你的钱包地址!');
+            return;
+          }
           _this.$axios.post('setPut', obj).then(function (result) {
             if (result.status == 0) {
               _this.myMessage.success('提交成功!');

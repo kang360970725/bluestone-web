@@ -36,7 +36,8 @@
               <thead>
               <tr>
                 <th>会员账号</th>
-                <th>提现金额</th>
+                <th>提现金额(已扣除手续费)</th>
+                <th>钱包地址</th>
                 <th>申请时间</th>
                 <th>操作</th>
               </tr>
@@ -44,7 +45,8 @@
               <tbody>
               <tr v-for="item in dataList" :key='item.id'>
                 <td>{{item.account}}</td>
-                <td><span :style="'color:' + item.color">{{item.put_num}}</span></td>
+                <td>{{(item.put_num - (item.put_num * 0.05)).toFixed(8)}}</td>
+                <td>{{item.address}}</td>
                 <td>{{item.timeTxt}}</td>
                 <td v-show="item.type == 0">
                   <div>
@@ -523,3 +525,5 @@
     cursor: pointer;
   }
 </style>
+
+
