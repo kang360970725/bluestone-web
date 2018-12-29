@@ -137,7 +137,7 @@
       </div><!-- End Top Header -->
 
       <!-- Start Bottom Header -->
-      <div class="bottom-header" v-if="user.level < 5">
+      <div class="bottom-header" v-if="user.level < 5 || !user">
         <div class="w-container">
           <a class="w-inline-block hamburger" data-ix="show-navigation-menu"></a>
           <a class="w-inline-block brand-logo">

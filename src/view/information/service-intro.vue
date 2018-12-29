@@ -47,7 +47,7 @@
           <div class="w-col w-col-4 col-md-6 col-sm-12">
             <div class="pricing-area-4">
               <div class="title-4">
-                <h1>{{$t('m.service.box_tit1')}}</h1>
+                <h1>蓝石期货 {{$t('m.service.box_tit1')}}</h1>
               </div>
               <div class="price-4">
                 <h1>$1000</h1>
@@ -72,7 +72,7 @@
             <div class="pricing-area-4">
               <div class="title-head">
                 <div class="title-4">
-                  <h1>{{$t('m.service.box_tit2')}}</h1>
+                  <h1>蓝石期货 {{$t('m.service.box_tit2')}}</h1>
                 </div>
                 <div class="best">
                   <span>Best value</span>
@@ -100,10 +100,89 @@
           <div class="w-col w-col-4 col-md-6 col-sm-12">
             <div class="pricing-area-4">
               <div class="title-4">
-                <h1>{{$t('m.service.box_tit3')}}</h1>
+                <h1>蓝石期货 {{$t('m.service.box_tit3')}}</h1>
               </div>
               <div class="price-4">
                 <h1>$3000</h1>
+                <span>{{$t('m.service.times')}}</span>
+              </div>
+              <div class="price-body-4">
+                <ul>
+                  <li>{{$t('m.service.box3_txt1')}}</li>
+                  <li>{{$t('m.service.box3_txt2')}}</li>
+                  <li>{{$t('m.service.box3_txt3')}}</li>
+                  <li>{{$t('m.service.box3_txt4')}}</li>
+                  <li>{{$t('m.service.box3_txt5')}}</li>
+                  <li>{{$t('m.service.box3_txt6')}}</li>
+                </ul>
+              </div>
+              <div class="price-button-4">
+                <a class="button-4" @click="showPrompPut1(3)">{{$t('m.service.btn1')}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="big-spc-bottom">
+          <div class="w-col w-col-4 col-md-6 col-sm-12">
+            <div class="pricing-area-4">
+              <div class="title-4">
+                <h1>蓝石现货机器人</h1>
+              </div>
+              <div class="price-4">
+                <h1>$1000</h1>
+                <span>{{$t('m.service.times')}}</span>
+              </div>
+              <div class="price-body-4">
+                <ul>
+                  <li>&nbsp;</li>
+                  <li>{{$t('m.service.box1_txt1')}}</li>
+                  <li>{{$t('m.service.box1_txt2')}}</li>
+                  <li>{{$t('m.service.box1_txt3')}}</li>
+                  <li>{{$t('m.service.box1_txt4')}}</li>
+                  <li>&nbsp;</li>
+                </ul>
+              </div>
+              <div class="price-button-4">
+                <a class="button-4" @click="showPrompPut1(1)">{{$t('m.service.btn1')}}</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-col w-col-4 col-md-6 col-sm-12">
+            <div class="pricing-area-4">
+              <div class="title-head">
+                <div class="title-4">
+                  <h1>蓝石矿池计划</h1>
+                </div>
+                <div class="best">
+                  <span>Best value</span>
+                </div>
+              </div>
+              <div class="price-4 price-active">
+                <h1>$1000</h1>
+                <span>{{$t('m.service.times')}}</span>
+              </div>
+              <div class="price-body-4">
+                <ul>
+                  <li>&nbsp;</li>
+                  <li>{{$t('m.service.box2_txt1')}}</li>
+                  <li>{{$t('m.service.box2_txt2')}}</li>
+                  <li>{{$t('m.service.box2_txt3')}}</li>
+                  <li>{{$t('m.service.box2_txt4')}}</li>
+                  <li>&nbsp;</li>
+                </ul>
+              </div>
+              <div class="price-button-4">
+                <a class="button-4 active-btn" @click="showPrompPut1(2)">{{$t('m.service.btn1')}}</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-col w-col-4 col-md-6 col-sm-12">
+            <div class="pricing-area-4">
+              <div class="title-4">
+                <h1>战狼机器人</h1>
+              </div>
+              <div class="price-4">
+                <h1>$2200</h1>
                 <span>{{$t('m.service.times')}}</span>
               </div>
               <div class="price-body-4">
@@ -252,6 +331,11 @@
       },
       showPrompPut1(id) {
         let _this = this;
+        if(!_this.user){
+          window.open('/login');
+          _this.myMessage.success('请先登录!');
+          return;
+        }
         _this.showDialog1 = true;
         window.scrollTo(0, 0);
         _this.openData.data_time = id;

@@ -146,26 +146,41 @@ export const m = {
     addr7: 'Operation Director',
   },
   product:{
-    txt1:'bluestone high-frequency quantification, according to Japan\'s Jiuda tactics as a cut-in model, detailed fund management refers to the Turtle rule, triple risk control, version optimization more than 100 times.',
-    txt2:'bluestone Version Introduction: <br> 1. This robot, with 5 minutes EMA7, 14, 21 benchmarks as the judgment condition <br> 2.3 EMA all downward breakthroughs to carry out short selling operations. <br>3. 3 EMA performs the buy operation in the case of all upward breakthroughs. <br>'+
-    '4. has experienced a sharp rise and fall. EMA will deviate greatly from the orbit and do not deal at this time. <br> 5. automatic rest function: if set to rest at 3:00-4:00, once empty in the middle, it will enter the resting state. <br>'+
-    '6. Optimize the best proportion of stop loss. Learn to stop loss is the first element of respecting the market <br> 7. Optimize the condition of changing warehouse. When the trend reverses and reaches the judgment benchmark, change warehouse operation. If you had 100 empty bills, you would change back-hand to more than 100 bills. <br>'+
-    '8. optimized the distance between the positions and the adjustment according to the market changes. <br> 9. The calculation of the warehouse bonus is optimized to ensure that the warehouse bonus issued every day can be continuously received in the warehouse state. <br> 10. Optimized transaction efficiency, because transaction fees are negative, so the more times we trade, the more revenue we get.',
-    txt3:'Chinchilla low-frequency grid, precise point low-buy high-sell, real-time monitoring pressure support, each transaction earns fees, long-term financial management is necessary.',
-    txt4: 'Introduction to the version of the cat: <br>' +
-    'Short term trading volume analysis of high point pressure position, low support level. <br>' +
-    'Quantify transactions, sell at high points, and buy at low prices. <br>' +
-    'No position control, no stop setting. <br>' +
-    'Scope of application: <br>' +
-    'Portfolio: bluestone replenishment mode is fully filled, it can be adjusted through the opening of the dragon cat version of the average price band. (open at the same time) immediately after closure. <br>' +
-    'Remember not to open the bluestone and the long cat strategy in the open space. <br>' +
-    'Long-term running alone dragon cat: according to the following proportion of funds to set the position of dragon cat, long-term hang-up monthly income of about 10%. (depending on market intensity) <br>' +
-    'The principal is less than 0.5btc, and the position is 100 dollars .<br>' +
-    'The principal is above 0.5btc, less than 1btc, and the position is 280 dollars .<br>' +
-    'The principal is larger than 1btc, less than 2btc, and the position is 500 dollars .<br>' +
-    'The principal is larger than 2btc, less than 3btc, and the position is 800 dollars.',
-    time1:'Release time: 19:26 September 8, 2018',
-    time2:'Release time: 13:16 September 23, 2018',
+    Bot1:'Bluestone Futures Robot',
+    Bot2:'Bluestone Spot Robot',
+    Bot3:'Blue stone pool',
+    Bot4:'Bluestone Warwolf Robot',
+    txt1:'Bluestone High Frequency Quantification, according to Japan\'s Takeda tactics as the entry model, detailed fund management refers to the Turtle Rule, triple risk control, version optimization more than 100 times.',
+    txt2:'Introduction of Bluestone Futures Robot：<br>The research and development of Bluestone Quantitative Strategy originated from the design and development of the Quantitative Team of Japanese Exchange, which is a fully automatic and programmed trading system to execute trading orders.' +
+    '<br>Intra-day trend trading for the mainstream currency BTC: using the Red Army and Green Army as opening targets, and using the Turtle Principle to control the position capital ratio.' +
+    '<br>Users can hang up long-term offline as long as they bind the API. The machine uses the world\'s best Amazon cloud server, 7*24 hours full-automatic trading.' +
+    '<br>Bluestone\'s quantitative investment technology and trading methods rely on objective strategy model, while the robot joins AI, it can learn to follow the market fluctuations by itself, so that the number of BTC users in the transaction increases gradually.',
+    price1:'Bluestone monthly card：200 USDT  <br> Blue stone year card：1500 USDT  <br> Currency limit：0.5 - 3 INDV BTC',
+    price2:'Bluestone monthly card：150 USDT  <br> Blue stone year card：1000 USDT  <br> Currency limit：0.5 - 5 INDV BTC',
+    price3:'Bluestone monthly card：150 USDT  <br> Blue stone year card：1000 USDT <br>  Currency limit：1 - 5 INDV BTC',
+    price4:'Bluestone monthly card：300 USDT  <br> Blue stone year card：2200 USDT  <br> Currency limit：0.5 - 3 INDV BTC',
+    txt3:'1.Contact Customer Service and Register Fire Currency Account with Recommended Links from Customer Service<br>2.Create an API and fill it with the same amount of BTC and USDT, respectively',
+    txt4:'Introduction of Bluestone Spot Robot：<br>Spot exchanges are much less risky than futures exchanges, and the exchange chosen by Bluestone Spot Robot, Firecoin Exchange, is very suitable for the use of quantitative trading strategies in a deeper and more comprehensive way.' +
+    '<br>At present, Bluestone Spot Robot has opened a pair of transactions for BTC：USDT。<br>Spot robots use built-in strategies to buy at the right opportunity and leave according to the set stopping point.' +
+    '<br>Spot robots can also achieve the purpose of short-selling, borrowing the underlying assets by using the short-selling mechanism of exchanges, selling at high points and buying at low points for profit.',
+    txt5:'1.Registration of Bluestone Futures Robots for Mine Pools<br>2.Contact Customer Service and Register for Official Pre-Sale by Customer Service<br>' +
+    '3.Register Bimex Account by Mine Pool Administrator<br>' +
+    '4.Fill a registered account with at least one up to three bitcoins',
+    txt5_1:'Brief Introduction of Bluestone Mine Pool：<br>Each pond of Bluestone Quantification will control the initial amount of money in a certain amount, each group of four people into a group, each group will implement a safe way of running, by Bluestone official professionals directly manipulate the tray.<br>' +
+    'The structure of the mine pool is like a spider web. After the profit is generated from the basic part, the profit is used to form an account with high profit (also a parameter of high risk), from which to gain more profit in the market.<br>' +
+    'It\'s like a spider\'s outer web after it\'s fed.When the risk comes, it tears up the outer network, while the inner network is intact, because the risky account uses the profit part to operate rather than the principal.<br>' +
+    'When the settlement period is up, the mine will allocate income to each user according to the input principal and quota according to the total income.' +
+    '<br>If the risk is encountered, the high-risk group will be damaged, and the four groups of other users\'investment will not be affected, thus ensuring the safety of the investment principal.',
+    txt6:'1.Register bitmex and create API, coinage<br>2.Login registered Bluestone account configuration API, key, parameters<br>3.It opens at 8 p.m., and the robots will start trading automatically.',
+    txt6_1:'Introduction of Wolf Warfare Robot：<br>Wolf Warfare Robot is a high-frequency quantized trading robot.' +
+    '<br>The speed of building and replenishing warehouses is obviously different from Bluestone Futures Robot, which belongs to the high-yield type.' +
+    '<br>The robot is judged on a 5-minute EMA7, 14, 21 benchmark.' +
+    '<br>Purchase or sell operations are performed according to all three EMA breakthroughs up or down.<br>Wolf robots are more intelligent than other Bluestone robots.' +
+    '<br>Transactions are executed more frequently<br>And there is a built-in "go-wild mechanism" (that is, tracking trends according to market changes), so the expected yield is higher, and of course the risk is greater.',
+    time1:'Release time:2018/12/20 19:26',
+    time2:'Release time:2018/12/20 13:16',
+    time3:'Release time:2018/12/21 10:06',
+    time4:'Release time:2018/12/22 08:00',
     tit1:'Product advantage',
     tit1_1:'Simple operation',
     tit1_2:'Active avoidance of risk',

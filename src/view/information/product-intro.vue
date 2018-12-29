@@ -18,7 +18,7 @@
     <!-- START SECTION 1 -->
     <section class="w-section section">
       <div class="w-container">
-        <!--产品介绍--蓝石-->
+        <!--产品介绍--蓝石期货-->
         <div class="one_box">
           <div class="w-col w-col-6">
             <div class="box-border w-col-12">
@@ -30,12 +30,36 @@
                 <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
                   <img class="left-ph right-ph" style="border: none;" width="180" src="../../../static/home/images/u7.png"/>
                   <br>
-                  <h2>{{$t('m.header.Bot1')}}</h2>
+                  <h2>{{$t('m.product.Bot1')}}</h2>
                   <br>
                   <p>{{$t('m.product.txt1')}}</p>
                   <p>{{$t('m.product.time1')}}</p>
                   <hr class="hr1" />
                   <p v-html="$t('m.product.txt2')"></p>
+                  <p v-html="$t('m.product.price1')"></p>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--产品介绍--龙猫期货-->
+          <div class="w-col w-col-6">
+            <div class="box-border w-col-12">
+              <div class="top-header">
+                <span class="font18">{{$t('m.header.Bot5')}}</span>
+                <a href="/login" class="fl-right button no-lft-mrg">{{$t('m.banner.ban3btn')}}</a>
+              </div>
+              <div class="txt-box" :class="$i18n.locale">
+                <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+                  <img class="left-ph right-ph" style="border: none;" width="180" src="../../../static/home/images/u11.png"/>
+                  <br>
+                  <h2>{{$t('m.product.Bot2')}}</h2>
+                  <br>
+                  <p v-html="$t('m.product.txt3')"></p>
+                  <p>{{$t('m.product.time2')}}</p>
+                  <hr class="hr1" />
+                  <p v-html="$t('m.product.txt4')"></p>
+                  <p v-html="$t('m.product.price2')"></p>
                   <br>
                 </div>
               </div>
@@ -50,14 +74,38 @@
               </div>
               <div class="txt-box" :class="$i18n.locale">
                 <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
-                  <img class="left-ph right-ph" style="border: none;" width="180" src="../../../static/home/images/u11.png"/>
+                  <img class="left-ph right-ph" style="border: none;" width="180" src="../../../static/home/images/xuexi.svg"/>
                   <br>
-                  <h2>{{$t('m.header.Bot2')}}</h2>
+                  <h2>{{$t('m.product.Bot3')}}</h2>
                   <br>
-                  <p>{{$t('m.product.txt3')}}</p>
-                  <p>{{$t('m.product.time2')}}</p>
+                  <p v-html="$t('m.product.txt5')"></p>
+                  <p>{{$t('m.product.time3')}}</p>
                   <hr class="hr1" />
-                  <p v-html="$t('m.product.txt4')"></p>
+                  <p v-html="$t('m.product.txt5_1')"></p>
+                  <p v-html="$t('m.product.price3')"></p>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--产品介绍--战狼-->
+          <div class="w-col w-col-6">
+            <div class="box-border w-col-12">
+              <div class="top-header">
+                <span class="font18">{{$t('m.header.Bot5')}}</span>
+                <a href="/login" class="fl-right button no-lft-mrg">{{$t('m.banner.ban3btn')}}</a>
+              </div>
+              <div class="txt-box" :class="$i18n.locale">
+                <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+                  <img class="left-ph right-ph" style="border: none;" width="180" src="../../../static/home/images/anquan1.svg"/>
+                  <br>
+                  <h2>{{$t('m.product.Bot4')}}</h2>
+                  <br>
+                  <p v-html="$t('m.product.txt6')"></p>
+                  <p>{{$t('m.product.time4')}}</p>
+                  <hr class="hr1" />
+                  <p v-html="$t('m.product.txt6_1')"></p>
+                  <p v-html="$t('m.product.price4')"></p>
                   <br>
                 </div>
               </div>
