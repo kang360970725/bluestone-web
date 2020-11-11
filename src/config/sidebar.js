@@ -29,7 +29,7 @@ let menusConfig = [
   },
   {
     key: "main",
-    title: "关于蓝石",
+    title: "关于蓝猫",
     href: "/main",
     icon: "fa icon-shutter",
     isShow: true

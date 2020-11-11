@@ -3,8 +3,8 @@ import Vue from 'vue';
 let devApiHost = "http://localhost:3000/";
 // let devApiHost = "http://192.168.0.159:3000/";
 let betaApiHost = "http://192.168.200.22:3000/";
-let releaseApiHost = "//www.bluestone.club:3000/";
-// let releaseApiHost = "//www.bluestone.club:3000/";
+let releaseApiHost = "//www.bluecat.club:3000/";
+// let releaseApiHost = "//www.bluecat.club:3000/";
 
 let httpConfig = {
     apiHost: ""

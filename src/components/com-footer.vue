@@ -1,7 +1,7 @@
 <template>
   <div class="app-footer app-footer-default" id="footer">
     <div class="app-footer-line darken">
-      <div class="copyright wide text-center">&copy; 2018.</div>
+      <div class="copyright wide text-center">&copy; 2020.</div>
     </div>
   </div>
 </template>

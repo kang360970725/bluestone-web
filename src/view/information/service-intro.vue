@@ -47,7 +47,7 @@
           <div class="w-col w-col-4 col-md-6 col-sm-12">
             <div class="pricing-area-4">
               <div class="title-4">
-                <h1>蓝石期货 {{$t('m.service.box_tit1')}}</h1>
+                <h1>蓝猫期货 {{$t('m.service.box_tit1')}}</h1>
               </div>
               <div class="price-4">
                 <h1>$1000</h1>
@@ -72,7 +72,7 @@
             <div class="pricing-area-4">
               <div class="title-head">
                 <div class="title-4">
-                  <h1>蓝石期货 {{$t('m.service.box_tit2')}}</h1>
+                  <h1>蓝猫期货 {{$t('m.service.box_tit2')}}</h1>
                 </div>
                 <div class="best">
                   <span>Best value</span>
@@ -100,7 +100,7 @@
           <div class="w-col w-col-4 col-md-6 col-sm-12">
             <div class="pricing-area-4">
               <div class="title-4">
-                <h1>蓝石期货 {{$t('m.service.box_tit3')}}</h1>
+                <h1>蓝猫期货 {{$t('m.service.box_tit3')}}</h1>
               </div>
               <div class="price-4">
                 <h1>$3000</h1>
@@ -126,7 +126,7 @@
           <div class="w-col w-col-4 col-md-6 col-sm-12">
             <div class="pricing-area-4">
               <div class="title-4">
-                <h1>蓝石现货机器人</h1>
+                <h1>蓝猫现货机器人</h1>
               </div>
               <div class="price-4">
                 <h1>$1000</h1>
@@ -151,7 +151,7 @@
             <div class="pricing-area-4">
               <div class="title-head">
                 <div class="title-4">
-                  <h1>蓝石矿池计划</h1>
+                  <h1>蓝猫矿池计划</h1>
                 </div>
                 <div class="best">
                   <span>Best value</span>

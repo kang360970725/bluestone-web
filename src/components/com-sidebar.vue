@@ -1,7 +1,7 @@
 <template>
   <div id="aa" class="app-sidebar app-navigation app-navigation-style-default app-navigation-open-hover dir-left" data-type="close-other">
     <a href="/" class="app-navigation-logo">
-      功夫蓝石量化
+      蓝猫科技
       <!--<button class="app-navigation-logo-button mobile-hidden" data-sidepanel-toggle=".app-sidepanel">-->
         <!--<span class="icon-alarm"></span>-->
         <!--<span class="app-navigation-logo-button-alert">7</span>-->

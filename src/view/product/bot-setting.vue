@@ -87,7 +87,7 @@
                       <div class="w-col w-col-12">
                         <div class="box-border pd-20">
                           <div class="top-header">
-                            <span class="font18">官方策略配置(适合蓝石新用户)</span>
+                            <span class="font18">官方策略配置(适合蓝猫新用户)</span>
                             <a class="fl-right button no-lft-mrg" @click="application">一键应用</a>
                           </div>
                           <div class="apply_Box input_outer">
@@ -208,7 +208,7 @@
                       <div class="w-col w-col-12">
                         <div class="box-border">
                           <div class="top-header">
-                            <span class="font18">自定义策略(适合蓝石高级用户)</span>
+                            <span class="font18">自定义策略(适合蓝猫高级用户)</span>
                             <a class="fl-right button no-lft-mrg" :class="bot.open ? 'off' : ''">
                               <input class="fl-right button no-lft-mrg" type="checkbox" v-model="bot.open"
                                      @click="openbot"/>
