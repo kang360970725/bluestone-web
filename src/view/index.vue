@@ -33,7 +33,7 @@
                 <video autoplay muted loop id="videos">
                   <source src="../../static/home/video/video-background.mp4" type="video/mp4">
                   <source src="http://3nacu.com/video-background.webm" type="video/webm">
-                  <img src="http://syddev.com/jquery.videoBG/assets/tunnel_animation.jpg" alt="bluecat">
+                  <img src="http://syddev.com/jquery.videoBG/assets/tunnel_animation.jpg" alt="Mu shu">
                 </video>
               </div>
               <div class="video-overlay">
@@ -362,7 +362,7 @@
         <div class="w-container">
           <div class="w-row">
             <div class="w-col w-col-4 w-col-stack">
-              <p class="copyright">© Copyright icode 2020. bluecat.</p>
+              <p class="copyright">© Copyright icode 2020. Mu shu.</p>
             </div>
             <div class="w-col w-col-8 w-col-stack">
               <div>

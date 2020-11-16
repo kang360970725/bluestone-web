@@ -46,10 +46,10 @@
               <!--<img class="left-ph right-ph" width="400" src="images/p1.jpg">-->
               <p>{{$t('m.header.bodyTitle')}}<img class="left-ph right-ph" width="250" src="../../../static/home/images/p1.png">
                 <br>
-                <br>蓝猫金融科技于2015年诞生于日本东京，秉承日本深厚文化底蕴，始终坚持“不二之法，单点突破”，2017年在中国成都成立蓝猫科技俱乐部，在金融科技领域里，
+                <br>沐数金融科技于2015年诞生于日本东京，秉承日本深厚文化底蕴，始终坚持“不二之法，单点突破”，2017年在中国成都成立沐数科技俱乐部，在金融科技领域里，
                 为客户量身定做最适合智能量化产品。精英团队同行、打造匠心方案，我们拥有一支由大型企业高管、行业专家、海内外知名高校教授及名牌院校的优秀硕博精英组成的专业团队。</p>
-              <p>bluecat Financial Technology was born in Tokyo, Japan in 2015. Adhering to Japan's profound cultural heritage,
-                it has always adhered to the "two-way approach, single breakthrough". In 2017, bluecat Science and Technology Club was established in Chengdu,
+              <p>Mu shu Financial Technology was born in Tokyo, Japan in 2015. Adhering to Japan's profound cultural heritage,
+                it has always adhered to the "two-way approach, single breakthrough". In 2017, Mu shu Science and Technology Club was established in Chengdu,
                 China. In the field of financial technology, it tailored the most suitable intelligent quantification products for customers.
                 We have a professional team consisting of senior executives of large enterprises, industry experts,
                 professors of famous universities at home and abroad, and excellent and rich elites of famous universities.</p>
@@ -71,7 +71,7 @@
                           {{$t('m.header.bodyTitle')}}（{{$t('m.contact.addr1')}}）<br>
                           {{$t('m.contact.addr3')}}<br>
                           {{$t('m.contact.addr4')}}<br>
-                          Email: support@bluecat.club<br>
+                          Email: support@mushu.cc<br>
                           Tel：075-753-5000<br><br>
                         </p>
                       </div>
@@ -85,7 +85,7 @@
                           {{$t('m.contact.addr2')}}<br>
                           {{$t('m.contact.addr6')}}<br>
                           Tel：028-64684518<br>
-                          Email: bluecat@163.com<br>
+                          Email: mushu@163.com<br>
                           {{$t('m.contact.addr7')}}：18782007287<br>
                         </p>
                       </div>

@@ -142,7 +142,7 @@
           <a class="w-inline-block hamburger" data-ix="show-navigation-menu"></a>
           <a class="w-inline-block brand-logo">
             <!--<span class="slider-sub-txt" style="font-size: 27px"><span style="color: #00aecd;font-size: 31px">{{$t('m.header.logo1')}}</span>{{$t('m.header.logo2')}}</span>-->
-            <span class="slider-sub-txt" style="font-size: 27px"><span style="color: #00aecd;font-size: 31px">B</span>lue cat club</span>
+            <span class="slider-sub-txt" style="font-size: 27px"><span style="color: #00aecd;font-size: 31px">M</span>u Shu</span>
             <!--<img class="tooltip" width="55" src="../../static/home/img/logo.png" title="It's time to impress your visitors!" alt="Unikue Logo">-->
           </a>
           <!-- Navigation -->
@@ -287,13 +287,13 @@
         let _this = this;
         if ( type === 'zh' ) {
           _this.$i18n.locale = 'zh-CN';//关键语句
-          document.title = '蓝猫科技俱乐部'
+          document.title = '沐数科技俱乐部'
         }else if ( type === 'en' ) {
           _this.$i18n.locale = 'en-US';//关键语句
-          document.title = 'bluecat Club'
+          document.title = 'Mu shu Club'
         }else{
           _this.$i18n.locale = type;//关键语句
-          document.title = 'bluecat Club'
+          document.title = 'Mu shu Club'
         }
         localStorage.setItem('locale',_this.$i18n.locale)
       },

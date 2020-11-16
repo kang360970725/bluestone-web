@@ -5,8 +5,8 @@
         <span class="icon-bubble-alert"></span>
       </div>
       <div class="title">
-        <h1>蓝猫科技2.0即将开启</h1>
-        <p>公告:蓝猫即将开启，奖励更加疯狂。</p>
+        <h1>沐数科技2.0即将开启</h1>
+        <p>公告:沐数即将开启，奖励更加疯狂。</p>
       </div>
     </div>
   </div>

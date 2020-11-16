@@ -48,6 +48,6 @@ $(function () {
 
 Royal_Preloader.config({
   mode: 'text',
-  text: '蓝猫科技...',
+  text: '沐数科技...',
   background: '#00aecd'
 });

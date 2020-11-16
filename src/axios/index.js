@@ -11,7 +11,7 @@ let axiosRequset = axios.create({
 
 axiosRequset.interceptors.request.use((config) => {
     // config.headers["sessionId"] = !!localStorage.sessionId ? localStorage.sessionId : "";
-    config.headers["Authorization"] = "www.bluecat.club";
+    config.headers["Authorization"] = "www.mushu.cc";
     // config.headers["Content-Type"] = "application/json";
     return config
 })
